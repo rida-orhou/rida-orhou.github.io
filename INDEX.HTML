@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rida Orhou — CV Interactif</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- React + Babel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+</head>
+<body>
+
+<!-- ██ BACKGROUND -->
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<!-- ██ NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo"><span class="bracket">&lt;</span>RO<span class="bracket">/&gt;</span></a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ██ HERO -->
+<header id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-pre"><span class="prompt">~/cv $</span> <span id="typedText"></span><span class="blink">▋</span></p>
+      <h1>Rida<br/><em>Orhou</em></h1>
+      <p class="hero-role"><i class="fa-solid fa-code"></i> Computer Science Student — FSSM · Marrakech</p>
+      <p class="hero-bio">Étudiant passionné en 2ème année Informatique à la FSSM (S4), je maîtrise le développement logiciel (C++, Python) et la modélisation système (UML). Fort d'une expérience dans la gestion de la relation client, je combine rigueur technique et esprit d'équipe. À la recherche d'un stage pour relever des défis technologiques et contribuer à des projets innovants.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Voir mes Projets</a>
+        <a href="mailto:ridaorhou90@gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Me Contacter</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:ridaorhou90@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/orhourida01" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rida-orhou-186830400/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+      <h2 class="card-name">Rida Orhou</h2>
+      <p class="card-title">CS Student · L2 FSSM</p>
+      <div class="card-info">
+        <div class="info-item"><i class="fa-solid fa-location-dot"></i> Marrakech, Maroc</div>
+        <div class="info-item"><i class="fa-solid fa-envelope"></i> ridaorhou90@gmail.com</div>
+        <div class="info-item"><i class="fa-solid fa-phone"></i> 0717893043</div>
+        <div class="info-item"><i class="fa-brands fa-github"></i> github.com/orhourida01</div>
+        <div class="info-item"><i class="fa-solid fa-car"></i> Permis B</div>
+        <div class="info-item"><i class="fa-solid fa-calendar"></i> 7 Février 2006</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>scroll</span><div class="scroll-line"></div></div>
+</header>
+
+<!-- ██ ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="sec-label"><span class="sec-num">01</span><span class="sec-line"></span><span class="sec-tag">About Me</span></div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <h2>Passionné par les <em>systèmes</em> &amp; le <em>code</em>.</h2>
+        <p>Étudiant en 2ème année Informatique à la FSSM (Université Cadi Ayyad, Marrakech), je me spécialise en programmation orientée objet, conception de systèmes (UML) et administration Linux. Mon parcours atypique — de la coiffure à l'informatique — m'a forgé une capacité unique d'adaptation.</p>
+        <p>Je maîtrise le développement logiciel en C++ et Python, la modélisation UML, et explore activement le développement web. Fort d'une expérience dans la relation client et le tourisme, je combine rigueur technique et esprit d'équipe.</p>
+        <p>Je suis activement à la recherche d'un <strong>stage ou d'une formation stimulante</strong> pour approfondir mes compétences et contribuer à des projets concrets et innovants.</p>
+        <div class="about-tags">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Marrakech</span>
+          <span class="tag"><i class="fa-solid fa-graduation-cap"></i> L2 Informatique</span>
+          <span class="tag"><i class="fa-solid fa-briefcase"></i> Open to Internship</span>
+          <span class="tag"><i class="fa-solid fa-car"></i> Permis B</span>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box"><span class="stat-n" data-target="6">0</span><span class="stat-l">Projets</span></div>
+        <div class="stat-box"><span class="stat-n" data-target="2">0</span><span class="stat-l">Jeux SFML</span></div>
+        <div class="stat-box"><span class="stat-n" data-target="3">0</span><span class="stat-l">Langues</span></div>
+        <div class="stat-box"><span class="stat-n" data-target="100">0</span><span class="stat-l">% Motivé</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ██ SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-label"><span class="sec-num">02</span><span class="sec-line"></span><span class="sec-tag">Skills</span></div>
+    <h2 class="sec-title reveal">Stack <em>Technique</em></h2>
+    <div class="skills-wrap reveal">
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-solid fa-gear"></i> C / C++ (OOP)</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-solid fa-diagram-project"></i> UML Modeling</span><span class="skill-pct">82%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-brands fa-linux"></i> Linux / OS</span><span class="skill-pct">75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-brands fa-python"></i> Python (Automation)</span><span class="skill-pct">78%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-solid fa-database"></i> SQL / Databases</span><span class="skill-pct">70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-brands fa-git-alt"></i> Git / GitHub</span><span class="skill-pct">85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-brands fa-html5"></i> HTML / CSS / JS</span><span class="skill-pct">72%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span><i class="fa-brands fa-react"></i> React (Learning)</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
+      </div>
+    </div>
+    <!-- Languages -->
+    <h3 class="sub-title reveal">Langues</h3>
+    <div class="lang-wrap reveal">
+      <div class="lang-card"><span class="lang-flag">🇲🇦</span><span>Arabe</span><span class="lang-lvl">Natif</span></div>
+      <div class="lang-card"><span class="lang-flag">🇫🇷</span><span>Français</span><span class="lang-lvl">Avancé</span></div>
+      <div class="lang-card"><span class="lang-flag">🇬🇧</span><span>Anglais</span><span class="lang-lvl">Technique</span></div>
+    </div>
+    <!-- Soft skills -->
+    <h3 class="sub-title reveal">Certifications &amp; Soft Skills</h3>
+    <div class="pills-wrap reveal">
+      <span class="pill"><i class="fa-solid fa-crown"></i> Team Leadership</span>
+      <span class="pill"><i class="fa-solid fa-headset"></i> Customer Service</span>
+      <span class="pill"><i class="fa-solid fa-car"></i> Permis B</span>
+      <span class="pill"><i class="fa-solid fa-lightbulb"></i> Adaptabilité</span>
+      <span class="pill"><i class="fa-solid fa-clock"></i> Ponctualité</span>
+      <span class="pill"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</span>
+    </div>
+  </div>
+</section>
+
+<!-- ██ EDUCATION (jQuery accordion timeline) -->
+<section id="education">
+  <div class="container">
+    <div class="sec-label"><span class="sec-num">03</span><span class="sec-line"></span><span class="sec-tag">Formation</span></div>
+    <h2 class="sec-title reveal">Parcours <em>Académique</em></h2>
+    <p class="sec-hint reveal"><i class="fa-solid fa-hand-pointer"></i> Cliquer sur chaque étape pour voir les détails</p>
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-dot"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <div>
+              <span class="tl-date">2024 — 2026</span>
+              <h3>DEUG — Informatique (L2 / S4 En Cours)</h3>
+              <p class="tl-place"><i class="fa-solid fa-building-columns"></i> FSSM · Université Cadi Ayyad, Marrakech</p>
+            </div>
+            <span class="tl-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="tl-body">
+            <p>Spécialisation en programmation orientée objet (C++), conception de systèmes avec UML, bases de données SQL, administration Linux, et développement logiciel. Formation solide en algorithmique et structures de données.</p>
+            <div class="tl-tags"><span>C++</span><span>UML</span><span>SQL</span><span>Linux</span><span>Algorithmique</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i class="fa-solid fa-scissors"></i></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <div>
+              <span class="tl-date">2023 — 2024</span>
+              <h3>Diplôme de Coiffure-Visagiste</h3>
+              <p class="tl-place"><i class="fa-solid fa-certificate"></i> Formation Qualifiée</p>
+            </div>
+            <span class="tl-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="tl-body">
+            <p>Formation professionnelle complète en coiffure et visagisme. Cette expérience a renforcé mes capacités relationnelles, mon sens du détail et mon esprit entrepreneurial — compétences directement transférables au domaine du développement.</p>
+            <div class="tl-tags"><span>Relation Client</span><span>Précision</span><span>Créativité</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"><i class="fa-solid fa-flask"></i></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <div>
+              <span class="tl-date">2022 — 2023</span>
+              <h3>Baccalauréat — Sciences Physiques &amp; Chimiques</h3>
+              <p class="tl-place"><i class="fa-solid fa-school"></i> Lycée El Morabitin, Tinghir</p>
+            </div>
+            <span class="tl-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="tl-body">
+            <p>Option Français. Formation scientifique rigoureuse en physique, chimie et mathématiques — socle de ma pensée analytique et logique appliquée à l'informatique.</p>
+            <div class="tl-tags"><span>Physique</span><span>Chimie</span><span>Mathématiques</span><span>Logique</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ██ PROJECTS — React mounts here -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-label"><span class="sec-num">04</span><span class="sec-line"></span><span class="sec-tag">Projets &amp; Expériences</span></div>
+    <h2 class="sec-title reveal">Ce que j'ai <em>Construit</em></h2>
+    <div id="react-projects"></div>
+    <!-- Work experience below projects -->
+    <div class="work-exp reveal">
+      <h3 class="sub-title"><i class="fa-solid fa-briefcase"></i> Expériences Professionnelles</h3>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-icon"><i class="fa-solid fa-car"></i></div>
+          <div>
+            <h4>Customer Service &amp; Logistics</h4>
+            <p>Location de Voitures &amp; Tourisme · Marrakech</p>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div>
+            <h4>Hospitality Professional</h4>
+            <p>Server · Restaurants &amp; Cafés · Marrakech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ██ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-label"><span class="sec-num">05</span><span class="sec-line"></span><span class="sec-tag">Contact</span></div>
+    <div class="contact-wrap reveal">
+      <div class="contact-left">
+        <h2>Travaillons <em>ensemble</em>.</h2>
+        <p>Je suis ouvert à toute opportunité de stage, collaboration ou projet intéressant. N'hésitez pas à me contacter !</p>
+        <div class="contact-links">
+          <a href="mailto:ridaorhou90@gmail.com" class="c-link"><span class="c-icon"><i class="fa-solid fa-envelope"></i></span>ridaorhou90@gmail.com</a>
+          <a href="tel:0717893043" class="c-link"><span class="c-icon"><i class="fa-solid fa-phone"></i></span>0717893043</a>
+          <a href="https://github.com/orhourida01" target="_blank" class="c-link"><span class="c-icon"><i class="fa-brands fa-github"></i></span>github.com/orhourida01</a>
+          <a href="https://www.linkedin.com/in/rida-orhou-186830400/" target="_blank" class="c-link"><span class="c-icon"><i class="fa-brands fa-linkedin"></i></span>linkedin.com/in/rida-orhou</a>
+          <div class="c-link static"><span class="c-icon"><i class="fa-solid fa-location-dot"></i></span>Marrakech, Maroc</div>
+        </div>
+      </div>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-grp">
+            <label for="fname"><i class="fa-solid fa-user"></i> Nom</label>
+            <input type="text" id="fname" placeholder="Votre nom complet"/>
+            <span class="ferr" id="err-name"></span>
+          </div>
+          <div class="form-grp">
+            <label for="femail"><i class="fa-solid fa-envelope"></i> Email</label>
+            <input type="email" id="femail" placeholder="vous@email.com"/>
+            <span class="ferr" id="err-email"></span>
+          </div>
+        </div>
+        <div class="form-grp">
+          <label for="fsubject"><i class="fa-solid fa-tag"></i> Sujet</label>
+          <input type="text" id="fsubject" placeholder="Objet de votre message"/>
+        </div>
+        <div class="form-grp">
+          <label for="fmsg"><i class="fa-solid fa-message"></i> Message</label>
+          <textarea id="fmsg" rows="5" placeholder="Votre message (min. 10 caractères)..."></textarea>
+          <span class="ferr" id="err-msg"></span>
+        </div>
+        <button type="submit" class="btn btn-primary full" id="submitBtn">
+          <i class="fa-solid fa-paper-plane"></i> <span id="btnTxt">Envoyer le message</span>
+        </button>
+        <div class="form-success" id="formSuccess"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ██ FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <span class="footer-logo"><span class="bracket">&lt;</span>RO<span class="bracket">/&gt;</span></span>
+    <p>© 2025 Rida Orhou · Marrakech · Built with HTML, CSS, jQuery &amp; React</p>
+    <a href="#hero" class="back-top"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+</footer>
+// pour la sourie
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+<script src="script.js"></script>
+</body>
+</html>
