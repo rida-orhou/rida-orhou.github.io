@@ -2,7 +2,7 @@
 
 > Projet académique — Module **Programmation Web 2** · Licence L2 Informatique · FSSM · Université Cadi Ayyad
 
- **Live Demo :** [orhourida01.github.io](https://orhourida01.github.io)
+ **Live Demo :** [rida-orhou.github.io](https://rida-orhou.github.io)
 
 ---
 
@@ -21,7 +21,7 @@ Il présente mon parcours académique, mes compétences techniques, mes projets 
 | **CSS3** | Style & mise en forme | Flexbox, Grid, animations, responsive design |
 | **jQuery 3.7** | Interactivité DOM | Animations barres, accordion, validation formulaire |
 | **ReactJS 18** | Composants dynamiques | Section Projets avec `<ProjectCard />` |
-| **GitHub Pages** | Hébergement | Déployé sur `orhourida01.github.io` |
+| **GitHub Pages** | Hébergement | Déployé sur `rida-orhou.github.io` |
 
 ---
 
@@ -51,10 +51,8 @@ function ProjectCard({ data }) {
     </div>
   );
 }
-```
 
-#### 2. `ProjectsSection` — Grille de tous les projets
-```jsx
+. ProjectsSection — Grille de tous les projets
 function ProjectsSection() {
   return (
     <div className="projects-grid">
@@ -64,10 +62,8 @@ function ProjectsSection() {
     </div>
   );
 }
-```
 
-#### 3. Données `PROJECTS` — Tableau de props
-```js
+3. Données PROJECTS — Tableau de props
 const PROJECTS = [
   {
     num: '01',
@@ -75,29 +71,17 @@ const PROJECTS = [
     title: 'Tic-Tac-Toe SFML / C++',
     desc: '...',
     tags: ['C++', 'SFML', 'OOP'],
-    github: 'https://github.com/orhourida01/Tic-Tac-Toe-SFML-Cpp',
-    demo: 'https://orhourida01.github.io/Tic-Tac-Toe-SFML-Cpp/'
+    github: '[https://github.com/orhourida01/Tic-Tac-Toe-SFML-Cpp](https://github.com/orhourida01/Tic-Tac-Toe-SFML-Cpp)',
+    demo: '[https://orhourida01.github.io/Tic-Tac-Toe-SFML-Cpp/](https://orhourida01.github.io/Tic-Tac-Toe-SFML-Cpp/)'
   },
   // ... 5 autres projets
 ];
-```
 
-### Montage React dans le DOM
-```js
+Montage React dans le DOM
 const reactRoot = document.getElementById('react-projects');
 ReactDOM.createRoot(reactRoot).render(h(ProjectsSection));
-```
 
-> **Note :** React est utilisé via CDN avec `createElement` (sans JSX compilé) pour compatibilité GitHub Pages sans build step.
-
----
-
-##  Utilisation de jQuery
-
-jQuery est utilisé pour **4 fonctionnalités interactives** :
-
-### 1.  Animation des barres de compétences (au scroll)
-```js
+1.  Animation des barres de compétences (au scroll)
 // Déclenchée quand la section Skills devient visible
 $(window).on('scroll.skills', function () {
   if ($(window).scrollTop() + $(window).height() > $('#skills').offset().top + 100) {
@@ -109,10 +93,8 @@ $(window).on('scroll.skills', function () {
     });
   }
 });
-```
 
-### 2.  Accordion interactif — Section Formation
-```js
+2.  Accordion interactif — Section Formation
 // Ouvre/ferme les détails de chaque étape du parcours
 $('.tl-header').on('click', function () {
   const $body  = $(this).closest('.tl-item').find('.tl-body');
@@ -127,10 +109,8 @@ $('.tl-header').on('click', function () {
     $arrow.addClass('open');
   }
 });
-```
 
-### 3.  Validation du formulaire de contact
-```js
+3.  Validation du formulaire de contact
 // Vérifie : champ vide, format email, longueur message
 function validate(fieldId, errId, check, msg) {
   const $f = $('#' + fieldId);
@@ -148,10 +128,8 @@ $('#contactForm').on('submit', function (e) {
   const okEmail = validate('femail', 'err-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), '⚠ Email invalide');
   const okMsg   = validate('fmsg',   'err-msg',   v => v.length >= 10, '⚠ Message trop court');
 });
-```
 
-### 4.  Lightbox — Agrandissement des images projets
-```js
+4.  Lightbox — Agrandissement des images projet
 // Ouvre l'image en plein écran au clic
 $(document).on('click', '.proj-preview-img', function () {
   const src = $(this).find('img').attr('src');
@@ -164,15 +142,10 @@ $(document).on('click', '.proj-preview-img', function () {
 $(document).on('keydown', function (e) {
   if (e.key === 'Escape') $('#imgLightbox').removeClass('open');
 });
-```
 
----
-
-##  Structure des Fichiers
-
-```
+Structure des Fichiers
 portfolio/
-├── index.html          # Structure HTML5 sémantique
+├── index.html          # Structure HTML5 sémantique (lowercase)
 ├── style.css           # Styles CSS3 (Flexbox + Grid + animations)
 ├── script.js           # jQuery + React components
 ├── img_tictac.png      # Screenshot Tic-Tac-Toe SFML
@@ -181,67 +154,58 @@ portfolio/
 ├── img_luxury.png      # Screenshot LuxuryStay Hotel
 ├── uml_scraper.png     # Diagramme UML Python Scraper
 └── uml_garage.png      # Diagramme UML C-Garage System
-```
 
----
+Projets Présentés
+#	Projet	Technologies	Links
+01	Tic-Tac-Toe SFML	C++, SFML, OOP	Code · Demo
+02	Forest Runner SFML	C++, SFML, Game Dev	Code · Demo
+03	FitZone Gym Web	HTML, CSS, JavaScript	Code · Demo
+04	Python Web Scraper	Python, Automation	Code · Demo
+05	C-Garage System	C, Struct, File I/O	Code · Demo
+06	LuxuryStay Hotel	HTML5, CSS3, JS	Code · Demo
 
-##  Projets Présentés
-
-| # | Projet | Technologies | Links |
-|---|--------|-------------|-------|
-| 01 | **Tic-Tac-Toe SFML** | C++, SFML, OOP | [Code](https://github.com/orhourida01/Tic-Tac-Toe-SFML-Cpp) · [Demo](https://orhourida01.github.io/Tic-Tac-Toe-SFML-Cpp/) |
-| 02 | **Forest Runner SFML** | C++, SFML, Game Dev | [Code](https://github.com/orhourida01/Forest-Runner-SFML) · [Demo](https://orhourida01.github.io/Forest-Runner-SFML/) |
-| 03 | **FitZone Gym Web** | HTML, CSS, JavaScript | [Code](https://github.com/orhourida01/FitZone-Gym-Management-Web) · [Demo](https://orhourida01.github.io/FitZone-Gym-Management-Web/) |
-| 04 | **Python Web Scraper** | Python, Automation | [Code](https://github.com/orhourida01/Python-Web-Scraper-Automation) · [Demo](https://orhourida01.github.io/Python-Web-Scraper-Automation/) |
-| 05 | **C-Garage System** | C, Struct, File I/O | [Code](https://github.com/orhourida01/C-Garage-Management-System) · [Demo](https://orhourida01.github.io/C-Garage-Management-System/) |
-| 06 | **LuxuryStay Hotel** | HTML5, CSS3, JS | [Code](https://github.com/orhourida01/LuxuryStay-Hotel-LandingPage) · [Demo](https://orhourida01.github.io/LuxuryStay-Hotel-LandingPage/) |
-
----
-
-##  Déploiement GitHub Pages
-
-```bash
+Déploiement GitHub Pages
 # 1. Initialiser le dépôt
 git init
 git add .
 git commit -m "init: cv interactif - jQuery + React"
 
 # 2. Connecter au remote
-git remote add origin https://github.com/orhourida01/orhourida01.github.io.git
+git remote add origin [https://github.com/rida-orhou/rida-orhou.github.io.git](https://github.com/rida-orhou/rida-orhou.github.io.git)
 
 # 3. Pousser
 git push -u origin main
 
 # 4. Activer GitHub Pages
-# Settings → Pages → Source: main branch / root
-# URL: https://orhourida01.github.io
-```
+# URL: [https://rida-orhou.github.io](https://rida-orhou.github.io)
 
----
+Fonctionnalités
+✅ Responsive — Mobile, tablette, desktop
 
-##  Fonctionnalités
+✅ Dark Mode — Thème terminal green
 
-- ✅ **Responsive** — Mobile, tablette, desktop
-- ✅ **Dark Mode** — Thème terminal green
-- ✅ **Typed effect** — Texte animé dans le hero
-- ✅ **Scroll reveal** — Apparition des sections au scroll
-- ✅ **Skill bars** — Barres animées jQuery au scroll
-- ✅ **Accordion** — Timeline formation interactive jQuery
-- ✅ **Form validation** — Validation temps réel jQuery
-- ✅ **React cards** — Composants ProjectCard dynamiques
-- ✅ **Lightbox** — Zoom image au clic
-- ✅ **Custom cursor** — Curseur personnalisé animé
+✅ Typed effect — Texte animé dans le hero
 
----
+✅ Scroll reveal — Apparition des sections au scroll
 
-##  Auteur
+✅ Skill bars — Barres animées jQuery au scroll
 
-**Rida Orhou**  
-- Marrakech, Maroc  
-- ridaorhou90@gmail.com  
-- [github.com/orhourida01](https://github.com/orhourida01)  
-- [linkedin.com/in/rida-orhou-186830400](https://www.linkedin.com/in/rida-orhou-186830400/)
+✅ Accordion — Timeline formation interactive jQuery
 
----
+✅ Form validation — Validation temps réel jQuery
 
-*Projet réalisé dans le cadre du module Programmation Web 2 — Licence L2 Informatique — FSSM · Université Cadi Ayyad · 2025*
+✅ React cards — Composants ProjectCard dynamiques
+
+✅ Lightbox — Zoom image au clic
+
+✅ Custom cursor — Curseur personnalisé animé
+
+
+Auteur
+Rida Orhou 📍 Marrakech, Maroc
+
+📧 ridaorhou90@gmail.com
+
+🔗 github.com/rida-orhou
+
+🔗 linkedin.com/in/rida-orhou-186830400
